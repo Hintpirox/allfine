@@ -11,7 +11,7 @@ For example: <code>/batch -100xxx</code>
 I'll handle the rest and get those links shortened or converted in a short time! 💪
 """
 
-START_MESSAGE = """Hi there {} 
+START_MESSAGE = """Hi {} 
 
 I'm here to help you convert Mdisk and other links 🔗 into shorter links using your API. Just send me any post with the links and I'll take care of the rest. I can even work in channels! 🤖
 
