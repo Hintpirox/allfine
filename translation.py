@@ -13,49 +13,39 @@ I'll handle the rest and get those links shortened or converted in a short time!
 
 START_MESSAGE = """Hi {} 
 
-I'm here to help you convert Mdisk and other links 🔗 into shorter links using your API. Just send me any post with the links and I'll take care of the rest. I can even work in channels! 🤖
-
-To learn more about what I can do, just type /help 🤔.
-
-Currently using the <b>{}</b> method and the <i>{}</i> website for link conversion 💻.
+I Am All In Link Converter Bot 🤖
+👉I Will Convert Mdisk Links To Your Linked Mdisk Api.
+👉I Will shorten links to your favorite link Shortener.
+👉I Can Also Convert Mdisk Link To Your Linked Api Ans Then To Your Linked Shortner Api. 
+Press /Help To See More About Me.
 """
 
 HELP_MESSAGE = """Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.
 
-I have a ton of handy features to help you out, such as:
+I have a Lot Of features to help you out, such as:
 
-- [Hyperlink](https://t.me/{username}) support 🔗
-- Button conversion support 🔘
-- Domain inclusion and exclusion options 🌐
-- Header and footer text support 📝
-- Replace username function 📎
-- Banner image support 🖼️
-- Batch conversion for channel admins only 📊
-- Channel support for admins only 📢
-- Forwarded post conversion for admins only 📩
+• I can Convert any links or posts to your Linked Shortner Or Mdisk Api link. (Button Links Posts, Hidden links/Hyperlinks All Are Supported)
 
-Useful commands:
+• I Can auto add custom footer text to your every post. Hit 👉 /footer To know more...
 
-- /start: Start me up! You probably already used this.
-- /help: Send this message; I'll tell you more about myself!
-- /batch -100xxx: To shorten or convert all posts in your channel
+• I Can auto add custom Header text to your every post. Hit 👉 /Header To know more...
 
-If you have any bugs or questions about how to use me, check out my [website]({repo}) or contact {owner}.
+• I Can replace / remove other's channel links with your channel link. Hit 👉 /Username To know More...
+
+• I Can Automatically Replace Your *Banner Image To images in the post. Hit  👉/Banner To Know More... 
+
+• No need to share password or email to convert links.
 
 Available commands:
 
-- **/shortener_api**
-- **/mdisk_api**
-- **/header**
-- **/footer**
-- **/username**
-- **/banner_image**
-- **/me**
-- **/base_site**
+- **Send /Site To Connect Your Shortner Site**
+- **Send /Shortner_api To Link Your Shortner Api**
+- **Send /mdisk_api To Connect Your Mdisk Api**
+- **/Info**
 - **/include_domain**
 - **/exclude_domain**
 
-Use these commands to learn more about each feature."""
+Any Issue Contact - @CyniteSupport"""
 
 ABOUT_TEXT = """
 **My Details:**
@@ -75,7 +65,7 @@ Current Method: {method}
     
 Methods Available:
 
-> `mdlink` - Change all the links of the post to your MDisk account first and then short to {shortener} link.
+> `mslink` - Change all the links of the post to your MDisk account first and then short to {shortener} link.
 
 > `shortener` - Short all the links of the post to {shortener} link directly.
 
@@ -107,15 +97,7 @@ Here is a list of the channels:
 HELP_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("Methods", callback_data="method_command"),
-            InlineKeyboardButton("Batch", callback_data="cbatch_command"),
-        ],
-        [
-            InlineKeyboardButton("Custom Alias", callback_data="alias_conf"),
-            InlineKeyboardButton("Admins", callback_data="admins_list"),
-        ],
-        [
-            InlineKeyboardButton("Channels", callback_data="channels_list"),
+            InlineKeyboardButton("Select Method", callback_data="method_command"),
             InlineKeyboardButton("Home", callback_data="start_command"),
         ],
     ]
@@ -135,12 +117,7 @@ ABOUT_REPLY_MARKUP = InlineKeyboardMarkup(
 START_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("Help", callback_data="help_command"),
-            InlineKeyboardButton("About", callback_data="about_command"),
-        ],
-        [
             InlineKeyboardButton("Method", callback_data="method_command"),
-            InlineKeyboardButton("Close", callback_data="delete"),
         ],
     ]
 )
@@ -149,7 +126,7 @@ METHOD_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                "MDLINK", callback_data="change_method#mdlink"
+                "MsLink", callback_data="change_method#mdlink"
             ),
             InlineKeyboardButton(
                 "Shortener", callback_data="change_method#shortener"
@@ -157,57 +134,56 @@ METHOD_REPLY_MARKUP = InlineKeyboardMarkup(
             InlineKeyboardButton("Mdisk", callback_data="change_method#mdisk"),
         ],
         [
-            InlineKeyboardButton("Back", callback_data="help_command"),
-            InlineKeyboardButton("Close", callback_data="delete"),
+            InlineKeyboardButton("Back", callback_data="start_command"),
         ],
     ]
 )
 
 BACK_REPLY_MARKUP = InlineKeyboardMarkup(
-    [[InlineKeyboardButton("Back", callback_data="help_command")]]
+    [[InlineKeyboardButton("Back", callback_data="start_command")]]
 )
 
 USER_ABOUT_MESSAGE = """
 🔧 Here are the current settings for this bot:
 
-- 🌐 Shortener website: {base_site}
+- 🌐 Linked Shortener website: {base_site}
 
-- 🧰 Method: {method}
+- 🧰 Selected Method: {method}
 
-- 🔌 {base_site} API: {shortener_api}
+- 🔌 Shortner API: {shortener_api}
 
 - 💾 Mdisk API: {mdisk_api}
 
-- 📎 Username: @{username}
+- 📎 Channel Username To Replace: @{username}
 
-- 📝 Header text:
+- 📝 Your Header text:
 {header_text}
 
-- 📝 Footer text:
+- 📝 Your Footer text:
 {footer_text}
 
-🖼️ Banner image: {banner_image}
+🖼️ Your Banner image: {banner_image}
 """
 
 
 MDISK_API_MESSAGE = """To add or update your Mdisk API, \n`/mdisk_api mdisk_api`
             
-Ex: `/mdisk_api 6LZq851sXoPHugiKQq`
+Ex: `/mdisk_api Qu7jX9V0Sn3q1JHdxjPp`
             
 Others Mdisk Links will be automatically changed to the API of this Mdisk account
 
-Get your Mdisk API from @VideoToolMoneyTreebot
+Get your Mdisk API from @VideoToolMoneyTree_bot
 
-Current Mdisk API: `{}`"""
+Current Linked Mdisk API: `{}`"""
 
 SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, 
 `/shortener_api [api]`
             
 Ex: `/shortener_api 6LZq851sXofffPHugiKQq`
 
-Current Website: {base_site}
+Linked Shortner Website: {base_site}
 
-To change your Shortener Website: /base_site
+To change your Shortener Website: /site
 
 Current Shortener API: `{shortener_api}`"""
 
@@ -242,13 +218,13 @@ To remove the current username, use the following command:
 This is a helpful way to make sure that all of your posts have a consistent username. Enjoy! 📎"""
 
 BANNER_IMAGE = """
-Usage: `/banner_image image_url` or reply to any Image with this command
+Usage: `/banner image_url` or reply to any Image with this command
 
 This image will be automatically replaced with other images in the post
 
-To remove custom image, `/banner_image remove`
+To remove custom image, `/banner remove`
 
-Eg: `/banner_image https://www.nicepng.com/png/detail/436-4369539_movie-logo-film.png`"""
+Eg: `/banner https://telegra.ph/file/61a90c3d61fc457fa9ef5.jpg`"""
 
 INCLUDE_DOMAIN_TEXT = """
 Use this option if you want to short only links from the following domains list.
