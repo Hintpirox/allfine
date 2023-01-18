@@ -88,7 +88,7 @@ async def help_command(c, m: Message):
         firstname=temp.FIRST_NAME,
         username=temp.BOT_USERNAME,
         repo=SOURCE_CODE,
-        owner="@ask_admin001",
+        owner="Cyniteofficial",
     )
 
     if WELCOME_IMAGE:
@@ -151,7 +151,7 @@ async def restart_handler(c: Client, m: Message):
     )
 
 
-@Client.on_message(filters.command("stats") & filters.private)
+@Client.on_message(filters.command("stats") & filters.user(ADMINS) & filters.private)
 @private_use
 async def stats_handler(c: Client, m: Message):
     try:
@@ -291,7 +291,7 @@ async def username_handler(bot, m: Message):
             await m.reply(f"Username updated successfully to {username}")
 
 
-@Client.on_message(filters.command("banner_image") & filters.private)
+@Client.on_message(filters.command("banner") & filters.private)
 @private_use
 async def banner_image_handler(bot, m: Message):
     user_id = m.from_user.id
@@ -325,14 +325,14 @@ async def banner_image_handler(bot, m: Message):
                 return await m.reply_text("Image URL is Invalid")
 
 
-@Client.on_message(filters.command("base_site") & filters.private)
+@Client.on_message(filters.command("shortner") & filters.private)
 @private_use
 async def base_site_handler(bot, m: Message):
     user_id = m.from_user.id
     user = await get_user(user_id)
     cmd = m.command
     site = user["base_site"]
-    text = f"`/base_site (base_site)`\n\nCurrent base site: {site}\n\n EX: `/base_site shareus.in`\n\nAvailable base sites:\n{avl_web1}\nAnd All alternate sites to droplink.co"
+    text = f"`/shortner (base_site)`\n\nCurrent Linked Shortner Website site: {site}\n\n EX: `/Shortner Shortnerfly.com `\n\nAvailable base sites:\n{avl_web1}\nAnd All alternate sites to Shortnerfly.com"
     if len(cmd) == 1:
         return await m.reply(text=text, disable_web_page_preview=True)
     elif len(cmd) == 2:
@@ -343,7 +343,7 @@ async def base_site_handler(bot, m: Message):
         await m.reply("Base Site updated successfully")
 
 
-@Client.on_message(filters.command("me") & filters.private)
+@Client.on_message(filters.command("info") & filters.private)
 @private_use
 async def me_handler(bot, m: Message):
     user_id = m.from_user.id
@@ -508,7 +508,7 @@ async def unban_user_handler(c: Client, m: Message):
         logging.exception(e, exc_info=True)
 
 
-@Client.on_message(filters.command("info") & filters.private & filters.user(ADMINS))
+@Client.on_message(filters.command("Get") & filters.private & filters.user(ADMINS))
 @private_use
 async def get_user_info_handler(c: Client, m: Message):
     try:
