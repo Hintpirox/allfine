@@ -8,7 +8,7 @@
     "shortener"
   ],
   "website": "https://github.com/Neutron-Bots",
-  "repository": "https://github.com/kevinnadar22/URL-Shortener-V2",
+  "repository": "https://github.com/Hintpirox/allfine",
   "env": {
     "BOT_TOKEN": {
       "description": "Your bot token from @botfather",
@@ -68,17 +68,12 @@
       "value": "False",
       "required": false
     }
-  },
-  "addons": [],
-  "buildpacks": [
-    {
-      "url": "heroku/python"
-    }
-  ],
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "free"
-    }
-  }
+
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+
 }
