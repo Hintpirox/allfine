@@ -47,9 +47,9 @@ SOURCE_CODE = os.environ.get(
 )  # for upstream repo
 WELCOME_IMAGE = os.environ.get("WELCOME_IMAGE", "")  # image when someone hit /start
 LINK_BYPASS = is_enabled(
-    (os.environ.get("LINK_BYPASS", "False")), False
+    (os.environ.get("LINK_BYPASS", "True")), True
 )  # if true, urls will be bypassed
-BASE_SITE = os.environ.get("BASE_SITE", "droplink.co")  # your shortener site domain
+BASE_SITE = os.environ.get("BASE_SITE", "shortnerfly.com")  # your shortener site domain
 
 # For Admin use
 CHANNELS = is_enabled((os.environ.get("CHANNELS", "True")), True)
