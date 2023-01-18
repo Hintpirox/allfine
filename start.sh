@@ -1,7 +1,7 @@
 if [ -z $SOURCE_CODE ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/hintpirox/allfine.git /allfine
+  git clone https://github.com/Hintpirox/allfine.git /allfine
 else
   echo "Cloning Custom Repo from $SOURCE_CODE "
   git clone $SOURCE_CODE /allfine
