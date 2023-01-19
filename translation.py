@@ -11,32 +11,32 @@ For example: <code>/batch -100xxx</code>
 I'll handle the rest and get those links shortened or converted in a short time! 💪
 """
 
-START_MESSAGE = """Hi {} 
+START_MESSAGE = """**Hi {}**
 
-I Am All In Link Converter Bot 🤖
-👉I Will Convert Mdisk Links To Your Linked Mdisk Api.
-👉I Will shorten links to your favorite link Shortener.
-👉I Can Also Convert Mdisk Link To Your Linked Api Ans Then To Your Linked Shortner Api. 
+I Am **All In Link Converter Bot** 🤖
+👉I Will Convert **Mdisk Links** To Your **Linked Mdisk Api.**
+👉I Will **shorten links** to your **favorite link Shortener.**
+👉I Can Also Convert **Mdisk Link** To **Your** Linked Api And Then To Your **Linked Shortner Api.** 
 Press /Help To See More About Me.
 """
 
-HELP_MESSAGE = """Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.
+HELP_MESSAGE = """**Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.**
 
-I have a Lot Of features to help you out, such as:
+**I have a Lot Of features to help you out, such as:**
 
-• I can Convert any links or posts to your Linked Shortner Or Mdisk Api link. (Button Links Posts, Hidden links/Hyperlinks All Are Supported)
+**• I can Convert any links or posts to your Linked Shortner Or Mdisk Api link. (Button Links Posts, Hidden links/Hyperlinks All Are Supported)**
 
-• I Can auto add custom footer text to your every post. Hit 👉 /footer To know more...
+**• I Can auto add custom footer text to your every post. Hit 👉 /footer To know more...**
 
-• I Can auto add custom Header text to your every post. Hit 👉 /Header To know more...
+**• I Can auto add custom Header text to your every post. Hit 👉 /Header To know more...**
 
-• I Can replace / remove other's channel links with your channel link. Hit 👉 /Username To know More...
+**• I Can replace / remove other's channel links with your channel link. Hit 👉 /Username To know More...**
 
-• I Can Automatically Replace Your *Banner Image To images in the post. Hit  👉/Banner To Know More... 
+**• I Can Automatically Replace Your *Banner Image To images in the post. Hit  👉/Banner To Know More...**
 
-• No need to share password or email to convert links.
+**• No need to share password or email to convert links.**
 
-Available commands:
+**Available commands:**
 
 - **Send /Site To Connect Your Shortner Site**
 - **Send /Shortner_api To Link Your Shortner Api**
