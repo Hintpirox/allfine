@@ -82,7 +82,7 @@ async def main_convertor_handler(
     METHODS = {
         "mdisk": mdisk_api_handler,
         "shortener": replace_link,
-        "mslink": mdisk_droplink_convertor,
+        "mslink": mdisk_shortner_convertor,
     }
 
     # Replacing the username with your username.
@@ -111,7 +111,7 @@ async def main_convertor_handler(
                 fileid = InputMediaPhoto(banner_image, caption=shortenedText)
 
     if message.text:
-        if user_method in ["shortener", "mdlink"] and "|" in caption:
+        if user_method in ["shortener", "mslink"] and "|" in caption:
             regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))\s\|\s([a-zA-Z0-9_]){,30}"
             if custom_alias := re.match(regex, caption):
                 custom_alias = custom_alias[0].split("|")
@@ -209,7 +209,7 @@ async def replace_link(user, text, alias=""):
     return text
 
 
-async def mdisk_droplink_convertor(user, text, alias=""):
+async def mdisk_shortner_convertor(user, text, alias=""):
     links = await mdisk_api_handler(user, text)
     links = await replace_link(user, links, alias=alias)
     return links
