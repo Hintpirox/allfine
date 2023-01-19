@@ -17,7 +17,15 @@ I Am **All In Link Converter Bot** 🤖
 👉I Will Convert **Mdisk Links** To Your **Linked Mdisk Api.**
 👉I Will **shorten links** to your **favorite link Shortener.**
 👉I Can Also Convert **Mdisk Link** To **Your** Linked Api And Then To Your **Linked Shortner Api.** 
-Press /Help To See More About Me.
+
+👇 **UseFull Commands** 👇
+
+💁‍♀️ Hit 👉 /help To Get Help.
+➕ Hit 👉 /header To Get Help About Adding your Custom Header Text to bot.
+➕ Hit 👉 /footer To Get Help About Adding your Custom Footer to bot.
+🖼️Hit 👉 /banner To Add Banner In Photo
+
+Any Issue Contact - @CyniteSupport
 """
 
 HELP_MESSAGE = """**Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.**
@@ -41,7 +49,7 @@ HELP_MESSAGE = """**Hey there! My name is {firstname} and I'm a link convertor a
 - **Send /Site To Connect Your Shortner Site**
 - **Send /Shortner_api To Link Your Shortner Api**
 - **Send /mdisk_api To Connect Your Mdisk Api**
-- **/Info**
+- **/Info To Get Infomation About You**
 - **/include_domain**
 - **/exclude_domain**
 
