@@ -21,9 +21,10 @@ I Am **All In Link Converter Bot** 🤖
 👇 **UseFull Commands** 👇
 
 💁‍♀️ Hit 👉 /help To Get Help.
-➕ Hit 👉 /header To Get Help About Adding your Custom Header Text to bot.
-➕ Hit 👉 /footer To Get Help About Adding your Custom Footer to bot.
-🖼️Hit 👉 /banner To Add Banner In Photo
+➕ Hit 👉 /header To Get Help About Adding your **Custom Header Text** to bot.
+➕ Hit 👉 /footer To Get Help About Adding your **Custom Footer** to bot.
+🖼️ Hit 👉 /banner To Add **Banner** In **Photo**
+👊Hit 👉 /Available_shortners To Get **Available Shortners List.**
 
 Any Issue Contact - @CyniteSupport
 """
@@ -46,7 +47,7 @@ HELP_MESSAGE = """**Hey there! My name is {firstname} and I'm a link convertor a
 
 **Available commands:**
 
-- **Send /Site To Connect Your Shortner Site**
+- **Send /Shortner To Connect Your Shortner Site**
 - **Send /Shortner_api To Link Your Shortner Api**
 - **Send /mdisk_api To Connect Your Mdisk Api**
 - **/Info To Get Infomation About You**
@@ -56,15 +57,52 @@ HELP_MESSAGE = """**Hey there! My name is {firstname} and I'm a link convertor a
 Any Issue Contact - @CyniteSupport"""
 
 ABOUT_TEXT = """
-**My Details:**
-
-`🤖 Name:` ** {} **
+**Available Websites:**
     
-`📝 Language:` [Python 3](https://www.python.org/)
-`🧰 Framework:` [Pyrogram](https://github.com/pyrogram/pyrogram)
-`👨‍💻 Developer:` [Dev](t.me/ask_admin001)
-`📢 Support:` [Talk Bot](https://t.me/ask_admin001)
-`🌐 Source Code:` [GitHub](https://github.com/kevinnadar22/URL-Shortener-V2/)
+Shortnerfly.com, 
+droplink.co, 
+gplinks.in, 
+tnlink.in, 
+za.gl, 
+du-link.in, 
+viplink.in, 
+shorturllink.in, 
+shareus.in, 
+earnspace.in, 
+mdisklink.link, 
+mdiskshortner.link, 
+pkin.me, 
+try2link.com, 
+adf.ly, 
+bit.ly, 
+shortly.xyz, 
+tinyurl.com,
+hypershort.com, 
+theforyou.in, 
+shorte.st, 
+earn4link.in,
+link.short2url.in, 
+indianshortner.in
+shortingly.me, 
+open2get.in, 
+dulink.in,
+pdiskshortener.com, 
+mdiskshortner.link,
+bitshorten.com, 
+rocklink.in, 
+xpshort.com,
+adrinolinks.in, 
+linkbnao.com, 
+linksxyz.in, 
+short-jambo.com, 
+ads.droplink.co.in, 
+linkpays.in, 
+pi-l.ink, 
+link.tnlink.in, 
+nanolinks.in
+mdisk.me, 
+Etc..
+And more 🤩
 """
 
 
