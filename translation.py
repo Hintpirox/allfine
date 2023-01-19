@@ -196,19 +196,19 @@ USER_ABOUT_MESSAGE = """
 
 **- ☑ Your Selected Method: {method}**
 
-- 👾 Your Shortner API: {shortener_api}
+**- 👾 Your Shortner API: {shortener_api}**
 
-- 📀 Mdisk API: {mdisk_api}
+**- 📀 Mdisk API: {mdisk_api}**
 
-- 📎 Channel Username To Replace: @{username}
+**- 📎 Channel Username To Replace: @{username}**
 
-- 📝 Header text:
-{header_text}
+**- 📝 Header text:
+{header_text}**
 
-- 📝 Footer text:
-{footer_text}
+**- 📝 Footer text:
+{footer_text}**
 
-🖼️ Banner image: {banner_image}
+**🖼️ Banner image: {banner_image}**
 """
 
 
