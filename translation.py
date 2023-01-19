@@ -190,25 +190,25 @@ BACK_REPLY_MARKUP = InlineKeyboardMarkup(
 )
 
 USER_ABOUT_MESSAGE = """
-🔧 Here are the current settings for this bot:
+**Here Is Your Information About You:**
 
-- 🌐 Linked Shortener website: {base_site}
+**- 🤡 Shortener website: {base_site}**
 
-- 🧰 Selected Method: {method}
+**- ☑ Your Selected Method: {method}**
 
-- 🔌 Shortner API: {shortener_api}
+- 👾 Your Shortner API: {shortener_api}
 
-- 💾 Mdisk API: {mdisk_api}
+- 📀 Mdisk API: {mdisk_api}
 
 - 📎 Channel Username To Replace: @{username}
 
-- 📝 Your Header text:
+- 📝 Header text:
 {header_text}
 
-- 📝 Your Footer text:
+- 📝 Footer text:
 {footer_text}
 
-🖼️ Your Banner image: {banner_image}
+🖼️ Banner image: {banner_image}
 """
 
 
