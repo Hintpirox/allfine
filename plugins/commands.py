@@ -333,7 +333,7 @@ async def base_site_handler(bot, m: Message):
     user = await get_user(user_id)
     cmd = m.command
     site = user["base_site"]
-    text = f"`/shortner (base_site)`\n\nCurrent Linked Shortner Website site: {site}\n\n EX: `/Shortner Shortnerfly.com `\n\nAvailable base sites:\n{avl_web1}\nAnd All alternate sites to Shortnerfly.com"
+    text = f"`/shortner (Website)`\n\nCurrent Linked Shortner Website site: {site}\n\n EX: `/Shortner Shortnerfly.com `\n\n Send /Available_Shortners To Get Available sites"
     if len(cmd) == 1:
         return await m.reply(text=text, disable_web_page_preview=True)
     elif len(cmd) == 2:
@@ -341,7 +341,7 @@ async def base_site_handler(bot, m: Message):
         if not domain(base_site):
             return await m.reply(text=text, disable_web_page_preview=True)
         await update_user_info(user_id, {"base_site": base_site})
-        await m.reply("Base Site updated successfully")
+        await m.reply("Shortner Website updated successfully")
 
 
 @Client.on_message(filters.command("info") & filters.private)
