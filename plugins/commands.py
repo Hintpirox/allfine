@@ -98,7 +98,7 @@ async def help_command(c, m: Message):
     await m.reply_text(s, reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
 
 
-@Client.on_message(filters.command("about"))
+@Client.on_message(filters.command("Available_Shortners"))
 @private_use
 async def about_command(c, m: Message):
     reply_markup = ABOUT_REPLY_MARKUP
