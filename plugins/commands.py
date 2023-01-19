@@ -34,6 +34,7 @@ user_commands = [
     "me",
 ]
 avl_web = [
+    "Shortnerfly.com",
     "droplink.co",
     "gplinks.in",
     "tnlink.in",
