@@ -211,7 +211,7 @@ async def mdisk_api_handler(bot, message: Message):
         await message.reply(f"Mdisk API updated successfully to {api}")
 
 
-@Client.on_message(filters.command("shortener_api") & filters.private)
+@Client.on_message(filters.command("shortner_api") & filters.private)
 @private_use
 async def shortener_api_handler(bot, m: Message):
     user_id = m.from_user.id
