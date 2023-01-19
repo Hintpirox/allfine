@@ -403,9 +403,9 @@ async def get_me_button(user):
 async def user_api_check(user):
     user_method = user["method"]
     text = ""
-    if user_method in ["mdisk", "mdlink"] and not user["mdisk_api"]:
+    if user_method in ["mdisk", "mslink"] and not user["mdisk_api"]:
         text += "\n\nSet your /mdisk_api to continue..."
-    if user_method in ["shortener", "mdlink"] and not user["shortener_api"]:
+    if user_method in ["shortener", "mslink"] and not user["shortener_api"]:
         text += f"\n\nSet your /shortener_api to continue...\nCurrent Website {user['base_site']}"
 
     if not user_method:
