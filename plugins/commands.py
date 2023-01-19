@@ -74,11 +74,8 @@ async def start(c: Client, m: Message):
 
     if WELCOME_IMAGE:
         return await m.reply_photo(
-            photo=WELCOME_IMAGE, caption=t, reply_markup=START_MESSAGE_REPLY_MARKUP
+            photo=WELCOME_IMAGE, caption=t
         )
-    await m.reply_text(
-        t, reply_markup=START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True
-    )
 
 
 @Client.on_message(filters.command("help") & filters.private)
