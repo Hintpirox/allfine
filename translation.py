@@ -101,23 +101,23 @@ pi-l.ink,
 link.tnlink.in, 
 nanolinks.in
 mdisk.me, 
-Etc..
-And more 🤩
+**Etc..
+And more 🤩**
 """
 
 
 METHOD_MESSAGE = """
-Current Method: {method}
+**Current Method: {method}**
     
-Methods Available:
+**Methods Available:**
 
-> `mslink` - Change all the links of the post to your MDisk account first and then short to {shortener} link.
+> `mslink` **- Change all the links of the post to your MDisk account first and then short to {shortener} link.**
 
-> `shortener` - Short all the links of the post to {shortener} link directly.
+> `shortener` **- Short all the links of the post to {shortener} link directly.**
 
-> `mdisk` - Save all the links of the post to your Mdisk account.
+> `mdisk` **- Save all the links of the post to your Mdisk account.**
     
-To change method, choose it from the following options:
+**To change method, choose from the Below Buttons:**
 """
 
 CUSTOM_ALIAS_MESSAGE = """For custom alias, `[link] | [custom_alias]`, Send in this format
