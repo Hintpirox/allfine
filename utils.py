@@ -368,7 +368,6 @@ async def get_me_button(user):
         buttons = [
             [
                 InlineKeyboardButton("Help", callback_data="help_command"),
-                ),
             ],
         ]
     except Exception as e:
