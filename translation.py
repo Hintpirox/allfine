@@ -172,7 +172,7 @@ METHOD_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                "MsLink", callback_data="change_method#mdlink"
+                "MsLink", callback_data="change_method#mslink"
             ),
             InlineKeyboardButton(
                 "Shortener", callback_data="change_method#shortener"
