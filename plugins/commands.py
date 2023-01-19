@@ -129,7 +129,7 @@ async def method_handler(c: Client, m: Message):
         return await m.reply(s, reply_markup=METHOD_REPLY_MARKUP)
     elif len(cmd) == 2:
         method = cmd[1]
-        if method not in ["mdisk", "mdlink", "shortener"]:
+        if method not in ["mdisk", "mslink", "shortener"]:
             return await m.reply(METHOD_MESSAGE.format(method=user["method"]))
         await update_user_info(user_id, {"method": method})
         await m.reply(f"Method updated successfully to {method}")
