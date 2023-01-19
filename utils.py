@@ -367,31 +367,7 @@ async def get_me_button(user):
     try:
         buttons = [
             [
-                InlineKeyboardButton("Header Text", callback_data="ident"),
-                InlineKeyboardButton(
-                    "❌ Disable" if user["is_header_text"] else "✅ Enable",
-                    callback_data=f'setgs#is_header_text#{not user["is_header_text"]}#{str(user_id)}',
-                ),
-            ],
-            [
-                InlineKeyboardButton("Footer Text", callback_data="ident"),
-                InlineKeyboardButton(
-                    "❌ Disable" if user["is_footer_text"] else "✅ Enable",
-                    callback_data=f'setgs#is_footer_text#{not user["is_footer_text"]}#{str(user_id)}',
-                ),
-            ],
-            [
-                InlineKeyboardButton("Username", callback_data="ident"),
-                InlineKeyboardButton(
-                    "❌ Disable" if user["is_username"] else "✅ Enable",
-                    callback_data=f'setgs#is_username#{not user["is_username"]}#{str(user_id)}',
-                ),
-            ],
-            [
-                InlineKeyboardButton("Banner Image", callback_data="ident"),
-                InlineKeyboardButton(
-                    "❌ Disable" if user["is_banner_image"] else "✅ Enable",
-                    callback_data=f'setgs#is_banner_image#{not user["is_banner_image"]}#{str(user_id)}',
+                InlineKeyboardButton("Help", callback_data="help_command"),
                 ),
             ],
         ]
