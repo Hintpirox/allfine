@@ -157,7 +157,6 @@ async def on_callback_query(bot: Client, query: CallbackQuery):
             HELP_MESSAGE.format(
                 firstname=temp.FIRST_NAME,
                 username=temp.BOT_USERNAME,
-                repo=SOURCE_CODE,
                 owner="@Cyniteofficial",
             ),
             reply_markup=HELP_REPLY_MARKUP,
