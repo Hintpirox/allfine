@@ -9,7 +9,6 @@ from config import (
     HEROKU_API_KEY,
     HEROKU_APP_NAME,
     LOG_CHANNEL,
-    SOURCE_CODE,
     WELCOME_IMAGE,
 )
 from database import db
@@ -88,7 +87,6 @@ async def help_command(c, m: Message):
     s = HELP_MESSAGE.format(
         firstname=temp.FIRST_NAME,
         username=temp.BOT_USERNAME,
-        repo=SOURCE_CODE,
         owner="Cyniteofficial",
     )
 
