@@ -10,7 +10,6 @@ DATABASE_URL = "mongodb+srv://username:pwd@cluster0.xxxx.mongodb.net/myFirstData
 CHANNELS = True
 CHANNEL_ID = [-1001798040070, -1001194853986]
 FORWARD_MESSAGE = True
-SOURCE_CODE = "https://github.com/kevinnadar22/URL-Shortener-V2"
 BANNER_IMAGE = "https://cdn.pixabay.com/photo/2019/04/24/21/55/cinema-4153289__480.jpg"
 WELCOME_IMAGE = "https://media.istockphoto.com/photos/hello-and-welcome-written-white-lightbox-sitting-on-blue-background-picture-id1371547852?b=1&k=20&m=1371547852&s=170667a&w=0&h=vRGvMO4a7KKYdTQ9Ln1UVdlg5C0POExw73jGsotVgzA="
 LINK_BYPASS = False
