@@ -14,14 +14,12 @@ from pyrogram.types import ( InlineKeyboardButton, InlineKeyboardMarkup,ForceRep
 from upgrade import upgrade
 
 
-import extras
-import mediainfo
 import datetime
 from datetime import timedelta, date ,datetime
 from datetime import date as date_
 from database.date import add_date ,check_expi
 from pyrogram.file_id import FileId
-ADMIN = int(os.environ.get("ADMIN", 5104293442))
+ADMIN = int(os.environ.get("ADMIN", 1883570185))
 from pyrogram.types import (InlineKeyboardButton, InlineKeyboardMarkup,ForceReply)
 
 
@@ -30,10 +28,6 @@ bot_token = os.environ.get("TOKEN", "5964120849:AAEWPKGrU_ofVnJZNRG22AEtqWL6G08k
 api_hash = os.environ.get("HASH", "5cf3577d85fd02286535ec2296934287") 
 api_id = os.environ.get("ID", "12124605")
 app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token)
-
-# preiumum
-from split import ss, temp_channel, isPremmium
-if isPremmium: acc = Client("myacc", api_id=api_id, api_hash=api_hash, session_string=ss)
 
 # optionals
 auth = os.environ.get("AUTH", "1291288382,1296213694,5104293442,5201973365")
