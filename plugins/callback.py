@@ -5,7 +5,7 @@ import os
 import re
 import sys
 
-from config import ADMINS, OWNER_ID, SOURCE_CODE, UPDATE_CHANNEL
+from config import ADMINS, OWNER_ID, UPDATE_CHANNEL
 from database import update_user_info
 from database.users import get_user
 from helpers import Helpers, temp
