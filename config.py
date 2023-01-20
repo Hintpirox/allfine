@@ -29,9 +29,12 @@ DATABASE_URL = os.environ.get(
     "DATABASE_URL", None
 )  # mongodb uri from https://www.mongodb.com/
 OWNER_ID = int(os.environ.get("OWNER_ID"))  # id of the owner
-BATCH_ACCESS = int(os.environ.get("BATCH_ACCESS"))
 ADMINS.append(OWNER_ID) if OWNER_ID not in ADMINS else []
-
+BATCH_ACCESS = (
+    [int(i.strip()) for i in os.environ.get("BATCH_ACCESS").split(",")]
+    if os.environ.get("BATCH_ACCESS")
+    else []
+)
 #  Optionnal variables
 LOG_CHANNEL = int(
     os.environ.get("LOG_CHANNEL", "0")
