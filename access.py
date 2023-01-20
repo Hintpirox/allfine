@@ -26,9 +26,9 @@ from pyrogram.types import (InlineKeyboardButton, InlineKeyboardMarkup,ForceRepl
 
 
 # app
-bot_token = os.environ.get("TOKEN", "5591577616:AAHUE8cMGXAVvJmRdBSwr1Jsfpz4Ltt93LU") 
-api_hash = os.environ.get("HASH", "016d5e115a06ddfb6121823d72ae4d8c") 
-api_id = os.environ.get("ID", "15823382")
+bot_token = os.environ.get("TOKEN", "5964120849:AAEWPKGrU_ofVnJZNRG22AEtqWL6G08koJA") 
+api_hash = os.environ.get("HASH", "5cf3577d85fd02286535ec2296934287") 
+api_id = os.environ.get("ID", "12124605")
 app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token)
 
 # preiumum
@@ -113,58 +113,18 @@ async def sts(c, m):
 
 @app.on_message(filters.private & filters.user(ADMIN) & filters.command(["addpremium"]))
 async def buypremium(bot, message):
-	await message.reply_text("Select Plan.........",quote=True,reply_markup=InlineKeyboardMarkup([[ 
-        			InlineKeyboardButton("VIP 1",callback_data = "vip1"), 
+	await message.reply_text("Select Plan.........",quote=True,reply_markup=InlineKeyboardMarkup([[  
         			InlineKeyboardButton("VIP 2",callback_data = "vip2") ]]))
         			
 
 @app.on_callback_query(filters.regex('vip1'))
 async def vip1(bot,update):
 	id = update.message.reply_to_message.text.split("/addpremium")
-	user_id = id[1].replace(" ", "")
-	inlimit  = 21474836480
-	uploadlimit(int(user_id),21474836480)
+	user_id = id[1].replace(" ", "") 
 	usertype(int(user_id),"VIP1")
 	addpre(int(user_id))
-	await update.message.edit("Added successfully To Premium Upload limit 20 GB")
-	await bot.send_message(user_id,"Hey Ur Upgraded To VIP 1 check your plan here /myplan")
-
-@app.on_callback_query(filters.regex('vip2'))
-async def vip2(bot,update):
-	id = update.message.reply_to_message.text.split("/addpremium")
-	user_id = id[1].replace(" ", "")
-	inlimit  = 107374182400
-	uploadlimit(int(user_id),107374182400)
-	usertype(int(user_id),"VIP2")
-	addpre(int(user_id))
-	await update.message.edit("Added successfully To Premium Upload limit 100 GB")
-	await bot.send_message(user_id,"Hey Ur Upgraded To VIP 2 check your plan here /myplan")
-
-	
-#broadcast
-@app.on_message(filters.private & filters.user(ADMIN) & filters.command(["broadcast"]))
-async def broadcast(bot, message):
- if (message.reply_to_message):
-   ms = await message.reply_text("Geting All ids from database ...........")
-   ids = getid()
-   tot = len(ids)
-   success = 0 
-   failed = 0 
-   await ms.edit(f"Starting Broadcast .... \n Sending Message To {tot} Users")
-   for id in ids:
-     try:
-     	time.sleep(1)
-     	await message.reply_to_message.copy(id)
-     	success += 1 
-     except:
-     	failed += 1
-     	delete({"_id":id})     	 
-     	pass
-     try:
-     	await ms.edit( f"Message sent to {success} chat(s). {failed} chat(s) failed on receiving message. \nTotal - {tot}" )
-     except FloodWait as e:
-     	await asyncio.sleep(t.x)
-
+	await update.message.edit("Added successfully To batch access")
+	await bot.send_message(user_id,"Hey Ur Upgraded check your plan here /myplan")
 
 # my plan
 
@@ -186,10 +146,10 @@ async def start(client,message):
 	user =  _newus["usertype"]
 	ends = _newus["prexdate"]
 	if ends == None:
-	    text = f"User ID:- ```{message.from_user.id}```\nPlan :- {user}\nDaly Upload Limit :- {humanbytes(limit)}\nToday Used :- {humanbytes(used)}\nRemain:- {humanbytes(remain)}"
+	    text = f"User ID:- ```{message.from_user.id}```\nPlan :- {user}\n
 	else:
 	    normal_date = datetime.fromtimestamp(ends).strftime('%Y-%m-%d')
-	    text = f"User ID:- ```{message.from_user.id}```\nPlan :- {user}\nDaly Upload Limit :- {humanbytes(limit)}\nToday Used :- {humanbytes(used)}\nRemain:- {humanbytes(remain)}\n\n```Your Plan Ends On :- {normal_date}"
+	    text = f"User ID:- ```{message.from_user.id}```\nPlan :- {user}\nYour Plan Ends On :- {normal_date}"
 	    
 	if user == "Free":
 	    await message.reply(text,quote = True,reply_markup = InlineKeyboardMarkup([[       			InlineKeyboardButton("Upgrade 💰💳",callback_data = "upgrade"), InlineKeyboardButton("Cancel ✖️ ",callback_data = "cancel") ]]))
