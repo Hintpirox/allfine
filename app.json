@@ -37,6 +37,11 @@
       "value": "",
       "required": false
     },
+    "BATCH_ACCESS": {
+      "description": "Id Of User, That Have Batch Access,Separate By comma",
+      "value": "",
+      "required": false
+    },
     "OWNER_ID": {
       "description": "ID of the Bot Owner",
       "value": "",
