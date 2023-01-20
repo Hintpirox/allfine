@@ -1,13 +1,7 @@
-import os
-import threading
-import subprocess
-import time
-
 import pyrogram
 from pyrogram import Client
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton
-from pyrogram.errors import FloodWait
 import asyncio
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.types import ( InlineKeyboardButton, InlineKeyboardMarkup,ForceReply)
@@ -28,11 +22,6 @@ bot_token = os.environ.get("TOKEN", "5964120849:AAEWPKGrU_ofVnJZNRG22AEtqWL6G08k
 api_hash = os.environ.get("HASH", "5cf3577d85fd02286535ec2296934287") 
 api_id = os.environ.get("ID", "12124605")
 app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token)
-
-# optionals
-auth = os.environ.get("AUTH", "1291288382,1296213694,5104293442,5201973365")
-ban = os.environ.get("BAN", "")
-from mdisk import iswin
 
 # start command
 @app.on_message(filters.private & filters.command(["start"]))
