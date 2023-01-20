@@ -27,7 +27,7 @@ api_id = os.environ.get("ID", "12124605")
 app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token)
 
 # upgrade command
-@app.on_message(filters.private & filters.command(["upgrade"]))
+@client.on_message(filters.private & filters.command(["upgrade"]))
 async def start(client,message):
 	await message.reply_text(text =f"""
 	Hello \n
