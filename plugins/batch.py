@@ -4,7 +4,7 @@ import datetime
 # Logger
 import logging
 
-from config import ADMINS
+from config import BATCH_ACCESS
 from database.users import get_user
 from helpers import AsyncIter, temp
 from pyrogram import Client, filters
@@ -26,10 +26,10 @@ lock = asyncio.Lock()
 cancel_button = [[InlineKeyboardButton("Cancel 🔐", callback_data="cancel_process")]]
 
 
-@Client.on_message(filters.private & filters.command("batch") & filters.user(ADMINS))
+@Client.on_message(filters.private & filters.command("batch") & filters.user(BATCH_ACCESS))
 async def batch(c, m: Message):
 
-    if m.from_user.id not in ADMINS:
+    if m.from_user.id not in BATCH_ACCESS:
         return await m.reply_text("Works only for admins")
 
     user_id = m.from_user.id
@@ -64,7 +64,7 @@ async def batch(c, m: Message):
 
 
 @Client.on_callback_query(
-    filters.regex(r"^cancel") | filters.regex(r"^batch") & filters.user(ADMINS)
+    filters.regex(r"^cancel") | filters.regex(r"^batch") & filters.user(BATCH_ACCESS)
 )
 async def batch_handler(c: Client, m: CallbackQuery):
     user_id = m.from_user.id
@@ -153,9 +153,9 @@ async def batch_handler(c: Client, m: CallbackQuery):
             logger.info(f"Batch Shortening Completed for {channel_id}")
 
 
-@Client.on_message(filters.private & filters.command("cancel") & filters.user(ADMINS))
+@Client.on_message(filters.private & filters.command("cancel") & filters.user(BATCH_ACCESS))
 async def stop_button(c, m):
-    if m.from_user.id in ADMINS:
+    if m.from_user.id in BATCH_ACCESS:
         temp.CANCEL = True
         msg = await c.send_message(
             text="<i>Trying To Stoping.....</i>", chat_id=m.chat.id
