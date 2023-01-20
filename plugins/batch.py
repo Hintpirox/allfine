@@ -161,6 +161,6 @@ async def stop_button(c, m):
             text="<i>Trying To Stoping.....</i>", chat_id=m.chat.id
         )
 
-        await asyncio.sleep(5)
+        await asyncio.sleep(0.1)
         await msg.edit("Batch Shortening Stopped Successfully 👍")
         logger.info("Batch Shortening Stopped Successfully 👍")
