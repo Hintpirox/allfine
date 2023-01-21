@@ -238,7 +238,7 @@ async def header_handler(bot, m: Message):
         header_text = m.reply_to_message.text.html
         await update_user_info(user_id, {"header_text": header_text})
         await m.reply("Header Text Updated Successfully")
-    elif "remove" in cmd:
+    elif "header_remove" :
         await update_user_info(user_id, {"header_text": ""})
         return await m.reply("Header Text Successfully Removed")
     else:
@@ -247,16 +247,6 @@ async def header_handler(bot, m: Message):
             + "\n\nCurrent Header Text: "
             + user["header_text"].replace("\n", "\n")
         )
-
-
-@Client.on_message(filters.command("header_remove") & filters.private)
-@private_use
-async def header_handler(bot, m: Message):
-    user_id = m.from_user.id
-    cmd = m.command
-    user = await get_user(user_id)
-        await update_user_info(user_id, {"header_text": ""})
-        return await m.reply("Header Text Successfully Removed")
 
 @Client.on_message(filters.command("footer") & filters.private)
 @private_use
