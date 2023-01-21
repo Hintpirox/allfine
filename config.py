@@ -65,7 +65,7 @@ DE_BYPASS = (
     if os.environ.get("DE_BYPASS")
     else []
 )
-DE_BYPASS.append("mdisk.me")
+DE_BYPASS.append("Shortnerfly.com")
 
 FORWARD_MESSAGE = is_enabled(
     (os.environ.get("FORWARD_MESSAGE", "False")), False
