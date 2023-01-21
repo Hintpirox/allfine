@@ -238,7 +238,7 @@ async def header_handler(bot, m: Message):
         header_text = m.reply_to_message.text.html
         await update_user_info(user_id, {"header_text": header_text})
         await m.reply("Header Text Updated Successfully")
-    elif "header_remove" :
+    elif "remove" in cmd:
         await update_user_info(user_id, {"header_text": ""})
         return await m.reply("Header Text Successfully Removed")
     else:
