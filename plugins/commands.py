@@ -249,6 +249,15 @@ async def header_handler(bot, m: Message):
         )
 
 
+@Client.on_message(filters.command("header_remove") & filters.private)
+@private_use
+async def header_handler(bot, m: Message):
+    user_id = m.from_user.id
+    cmd = m.command
+    user = await get_user(user_id)
+        await update_user_info(user_id, {"header_text": ""})
+        return await m.reply("Header Text Successfully Removed")
+
 @Client.on_message(filters.command("footer") & filters.private)
 @private_use
 async def footer_handler(bot, m: Message):
