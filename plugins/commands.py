@@ -72,7 +72,7 @@ async def start(c: Client, m: Message):
         m.from_user.mention, new_user["method"], new_user["base_site"]
     )
 
-   if WELCOME_IMAGE:
+    if WELCOME_IMAGE:
         return await m.reply_photo(
             photo=WELCOME_IMAGE, caption=t, reply_markup=START_MESSAGE_REPLY_MARKUP
         )
