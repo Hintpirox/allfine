@@ -24,7 +24,8 @@ from translation import (
     HELP_REPLY_MARKUP,
     METHOD_MESSAGE,
     METHOD_REPLY_MARKUP,
-    START_MESSAGE,
+    START_MESSAGE, 
+    START_MESSAGE_REPLY_MARKUP
 )
 from utils import get_me_button
 
@@ -174,6 +175,10 @@ async def on_callback_query(bot: Client, query: CallbackQuery):
         new_user = await get_user(query.from_user.id)
         tit = START_MESSAGE.format(
             query.from_user.mention, new_user["method"], new_user["base_site"]
+        )
+
+        await query.message.edit(
+            tit, reply_markup=START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True
         )
 
     elif query.data.startswith("change_method"):
