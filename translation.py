@@ -51,8 +51,6 @@ HELP_MESSAGE = """**Hey there! My name is {firstname} and I'm a link convertor a
 - **Send /Shortner_api To Link Your Shortner Api**
 - **Send /mdisk_api To Connect Your Mdisk Api**
 - **/Info To Get Infomation About You**
-- **/include_domain**
-- **/exclude_domain**
 
 Any Issue Contact - @CyniteSupport"""
 
@@ -111,11 +109,11 @@ METHOD_MESSAGE = """
     
 **Methods Available:**
 
-> `mslink` **- Change all the links of the post to your MDisk account first and then short to {shortener} link.**
+**>  mslink- Change all the links of the post to your MDisk account first and then short to {shortener} link.**
 
-> `shortener` **- Short all the links of the post to {shortener} link directly.**
+**>  shortner- Short all the links of the post to {shortener} link directly.**
 
-> `mdisk` **- Save all the links of the post to your Mdisk account.**
+**> mdisk - Save all the links of the post to your Mdisk account.**
     
 **To change method, choose from the Below Buttons:**
 """
@@ -144,7 +142,7 @@ HELP_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton("Select Method", callback_data="method_command"),
-            InlineKeyboardButton("Home", callback_data="start_command"),
+            InlineKeyboardButton("Back", callback_data="start_command"),
         ],
     ]
 )
@@ -223,13 +221,13 @@ Get your Mdisk API from @VideoToolMoneyTree_bot
 Current Linked Mdisk API: `{}`"""
 
 SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, 
-`/shortener_api [api]`
+`/shortner_api [api]`
             
 Ex: `/shortener_api 6LZq851sXofffPHugiKQq`
 
 Linked Shortner Website: {base_site}
 
-To change your Shortener Website: /site
+To change your Shortener Website: /shortner
 
 Current Shortener API: `{shortener_api}`"""
 
