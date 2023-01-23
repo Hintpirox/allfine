@@ -116,7 +116,7 @@ async def about_command(c, m: Message):
     )
 
 
-@Client.on_message(filters.command("method") & filters.private)
+@Client.on_message(filters.command("shift") & filters.private)
 @private_use
 async def method_handler(c: Client, m: Message):
     user_id = m.from_user.id
