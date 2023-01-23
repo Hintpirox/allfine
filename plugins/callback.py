@@ -176,10 +176,6 @@ async def on_callback_query(bot: Client, query: CallbackQuery):
             query.from_user.mention, new_user["method"], new_user["base_site"]
         )
 
-        await query.message.edit(
-            tit, reply_markup=START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True
-        )
-
     elif query.data.startswith("change_method"):
         method_name = query.data.split("#")[1]
         user = temp.BOT_USERNAME
