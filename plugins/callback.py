@@ -25,7 +25,6 @@ from translation import (
     METHOD_MESSAGE,
     METHOD_REPLY_MARKUP,
     START_MESSAGE,
-    START_MESSAGE_REPLY_MARKUP,
 )
 from utils import get_me_button
 
