@@ -72,7 +72,6 @@ async def start(c: Client, m: Message):
         m.from_user.mention, new_user["method"], new_user["base_site"]
     )
 
-
 @Client.on_message(filters.command("help") & filters.private)
 @private_use
 async def help_command(c, m: Message):
