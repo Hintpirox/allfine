@@ -254,7 +254,7 @@ async def is_droplink_url(url):
 
 
 async def broadcast_admins(c: Client, Message, sender=False):
-    admins = ADMINS[:]
+    admins = BATCH_ACCESS[:]
 
     if sender:
         admins.remove(sender)
