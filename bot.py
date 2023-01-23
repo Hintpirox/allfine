@@ -56,7 +56,7 @@ class Bot(Client):
         async for user in banned_users:
             temp.BANNED_USERS.append(user["user_id"])
         logging.info(LOG_STR)
-        await broadcast_admins(self, "** Bot started successfully **")
+        await broadcast_admins(self, "** Bot restarted successfully, You Have Premium Access So You Got This Message If You Are Doing Batch Then It Has Been Stopped So Please Batch Again I Am Sorry For That**")
         logging.info("Bot started")
 
         if REPLIT or KOYEB:
