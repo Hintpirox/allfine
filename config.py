@@ -55,7 +55,7 @@ BASE_SITE = os.environ.get("BASE_SITE", "shortnerfly.com")  # your shortener sit
 # For Admin use
 CHANNELS = is_enabled((os.environ.get("CHANNELS", "True")), True)
 CHANNEL_ID = (
-    [int(i.strip()) for i in os.environ.get("CHANNEL_ID").split(" ")]
+    [int(i.strip()) for i in os.environ.get("CHANNEL_ID").split(",")]
     if os.environ.get("CHANNEL_ID")
     else []
 )
