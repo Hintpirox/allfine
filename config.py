@@ -48,7 +48,7 @@ IS_PRIVATE = is_enabled(
 )  # true for private use and restricting users
 WELCOME_IMAGE = os.environ.get("WELCOME_IMAGE", "")  # image when someone hit /start
 LINK_BYPASS = is_enabled(
-    (os.environ.get("LINK_BYPASS", "True")), True
+    (os.environ.get("LINK_BYPASS", "False")), False
 )  # if true, urls will be bypassed
 BASE_SITE = os.environ.get("BASE_SITE", "shortnerfly.com")  # your shortener site domain
 
@@ -65,7 +65,7 @@ DE_BYPASS = (
     if os.environ.get("DE_BYPASS")
     else []
 )
-DE_BYPASS.append("Shortnerfly.com")
+DE_BYPASS.append("mdisk.me")
 
 FORWARD_MESSAGE = is_enabled(
     (os.environ.get("FORWARD_MESSAGE", "False")), False
